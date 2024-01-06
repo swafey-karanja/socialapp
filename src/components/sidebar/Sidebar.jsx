@@ -1,5 +1,7 @@
 import "./sidebar.css"
 import { Bookmarks, Chat, Event, Group, PlayArrow, RssFeed, School, WorkOutline, Help } from "@material-ui/icons"
+import { Users } from "../../Data";
+import Friendlist from "../friendlist/Friendlist"
 
 export default function sidebar() {
   return (
@@ -48,54 +50,9 @@ export default function sidebar() {
         <hr className="sidebarHr" />
 
         <ul className="sidebarFriendList">
-          <li className="sidebarFriend">
-            <img src="./assets/people/Img2.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">uchiha itachi</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="./assets/people/Img2.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">uchiha itachi</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="./assets/people/Img2.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">uchiha itachi</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="./assets/people/Img2.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">uchiha itachi</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="./assets/people/Img2.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">uchiha itachi</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="./assets/people/Img2.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">uchiha itachi</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="./assets/people/Img2.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">uchiha itachi</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="./assets/people/Img2.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">uchiha itachi</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="./assets/people/Img2.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">uchiha itachi</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="./assets/people/Img2.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">uchiha itachi</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="./assets/people/Img2.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">uchiha itachi</span>
-          </li>
-          <li className="sidebarFriend">
-            <img src="./assets/people/Img2.jpg" alt="" className="sidebarFriendImg" />
-            <span className="sidebarFriendName">uchiha itachi</span>
-          </li>
+          {Users.map (u => (
+            <Friendlist key={u.id} user={u}/>
+          ))}
         </ul>
       </div>
     </div>
