@@ -1,5 +1,5 @@
 import "./sidebar.css"
-import { Bookmarks, Chat, Event, Group, PlayArrow, RssFeed, School, WorkOutline, Help } from "@material-ui/icons"
+import { Bookmarks, Chat, Event, Group, PlayArrow, RssFeed, School, WorkOutline, Help } from "@mui/icons-material"
 import { Users } from "../../Data";
 import Friendlist from "../friendlist/Friendlist"
 
